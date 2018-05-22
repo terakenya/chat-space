@@ -19,13 +19,13 @@
 
 ### Association
 - has_many :groups
-- has_many :groups
+- has_many :members
 
 ## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|g_name|text||
+|group_name|text||
 
 ### Association
 - has_many :users
@@ -36,10 +36,9 @@
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
-|g_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 |message|string|
 |image|string|
-|m_time|integer|
 
 ### Association
 - belongs_to :group
