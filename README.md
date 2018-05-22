@@ -20,7 +20,6 @@
 - has_many :groups
 - has_many :groups
 
-
 ## groupsテーブル
 
 |Column|Type|Options|
@@ -40,7 +39,6 @@
 |message|string|
 |image|string|
 |m_time|integer|null: false, foreign_key: true|
-
 
 ### Association
 - belongs_to :group
