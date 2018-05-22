@@ -13,8 +13,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|text||
-|mail|text||
+|name|text|null: false|
+|mail|text|null: false|
 |password|integer|null: false|
 
 ### Association
