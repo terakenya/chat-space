@@ -8,6 +8,7 @@
 ### Association
 - belongs_to :group
 - belongs_to :user
+- has_many :users, through: :groups
 
 ## usersテーブル
 
@@ -20,6 +21,7 @@
 ### Association
 - has_many :groups
 - has_many :members
+- has_many :members, through: :groups
 
 ## groupsテーブル
 
