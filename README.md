@@ -15,6 +15,7 @@
 |------|----|-------|
 |name|text||
 |mail|text||
+|password|integer|null: false|
 
 ### Association
 - has_many :groups
