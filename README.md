@@ -19,7 +19,7 @@
 |password|integer|null: false|
 
 ### Association
-- has_many :groups
+- has_many :messages
 - has_many :members
 - has_many :groups, through: :members
 
@@ -30,7 +30,7 @@
 |group_name|text||
 
 ### Association
-- has_many :users
+- has_many :messages
 - has_many :members
 - has_many :users, through: :members
 
