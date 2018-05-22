@@ -38,7 +38,7 @@
 |g_id|integer|null: false, foreign_key: true|
 |message|string|
 |image|string|
-|m_time|integer|null: false, foreign_key: true|
+|m_time|integer|null: false|
 
 ### Association
 - belongs_to :group
