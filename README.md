@@ -14,9 +14,9 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|text||
-|mail|text||
-|password|integer|null: false|
+|name|text|devise|
+|mail|text|devise|
+|password|string|devise|
 
 ### Association
 - has_many :messages
