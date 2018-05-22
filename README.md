@@ -13,8 +13,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|text|null: false|
-|mail|text|null: false|
+|name|text||
+|mail|text||
 |password|integer|null: false|
 
 ### Association
@@ -39,7 +39,7 @@
 |g_id|integer|null: false, foreign_key: true|
 |message|string|
 |image|string|
-|m_time|integer|null: false|
+|m_time|integer|
 
 ### Association
 - belongs_to :group
