@@ -2,19 +2,18 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
 - belongs_to :user
 
-
 ## usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|name|text|devise|
+|name|text|devise, null: false, index: true|
 |mail|text|devise|
 |password|string|devise|
 
@@ -27,7 +26,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name|text||
+|name|text||
 
 ### Association
 - has_many :messages
@@ -42,7 +41,6 @@
 |image|string|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
-
 
 ### Association
 - belongs_to :group
