@@ -1,4 +1,134 @@
 @import "./reset";
-/*
- *= require font-awesome
- */
+@import "font-awesome";
+
+
+.side-bar {
+  width: 300px;
+  float:left;
+  background-color:yellow;
+  .header {
+    height:100px;
+    background-color: #253141;
+    padding:0px 20px;
+    line-height: 100px;
+    .username{
+      color:white;
+      font-size: 16px;
+      float:left;
+    }
+      .haguruma{
+        float: right;
+        color:white;
+        float:right;
+      }
+      .enpitu{
+        float: right;
+        color:white;
+        float:right;
+    }
+  }
+  .groups {
+    height:calc(100vh - 100px);
+    background-color: #2f3e51;
+    padding:0px 20px 0px 20px;
+    .group{
+      padding: 40px 0px 20px 0px;
+      color: white;
+      .groupname{
+        font-size: 15px;
+      }
+      .lastmessage{
+        font-size: 11px;
+      }
+    }
+  }
+}
+
+
+.chat {
+  width:calc(100vw - 300px);
+  background-color:red;
+  float:right;
+
+  .chatheader{
+    height: 100px;
+    padding:0px 40px;
+    background-color: white;
+    .chatgrouptitle{
+      float:left;
+      .chatnametitle{
+        padding:35px 0px 0px 0px;
+        font-size: 20px;
+        color:#333333;
+        font-weight: bold;
+      }
+      .chatmembertitle{
+        padding:15px 0px 0px 0px;
+        font-size: 12px;
+        color:#999999
+      }
+    }
+    .right-header{
+      border: 1px solid #38AEF0;
+      color: #38AEF0;
+      float: right;
+      height: 40px;
+      line-height: 40px;
+      margin-top: 28px;
+      padding: 0 20px;
+      .right-header__button{
+        color: #38AEF0;
+        text-decoration: none
+
+      }
+    }
+  }
+
+  .chatgroups{
+    height: calc(100vh - 100px - 90px);
+    background-color: #FAFAFA;
+    padding:0px 40px;
+    overflow: scroll;
+    .chatgroup{
+      .chatinfo{
+        .chatname{
+          padding:46px 0 0 0;
+          font-size: 16px;
+          color:#434A54;
+          font-weight: bold;
+          display: inline-block;
+        }
+        .chattime{
+          display: inline-block;
+          font-size: 11px;
+          color: #999999;
+        }
+      }
+      .chatmessage{
+        padding:10px 0 0 0;
+        font-size: 14px;
+        color:#434A54;
+      }
+    }
+  }
+  .form{
+    height: 50px;
+    padding:20px 50px 20px 40px;
+    background-color:#dddddd;
+    .messageform{
+      height: 50px;
+      width: calc(100% - 150px);
+      float:left;
+    }
+    .sendbottan {
+      background-color: #38AEF0;
+      border: none;
+      color: #fff;
+      float: right;
+      font-size: 16px;
+      height: 50px;
+      margin-left: 15px;
+      padding: 0 30px;
+    }
+  }
+}

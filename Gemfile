@@ -55,3 +55,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'erb2haml'
 #歯車マークを追加
 gem "font-awesome-rails"
+#hamlを導入
+gem 'haml-rails'
