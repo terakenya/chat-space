@@ -16,15 +16,10 @@
       font-size: 16px;
       float:left;
     }
-      .haguruma{
-        float: right;
-        color:white;
-        float:right;
-      }
-      .enpitu{
-        float: right;
-        color:white;
-        float:right;
+    .list{
+      float: right;
+      color:white;
+      float:right;
     }
   }
   .groups {
@@ -34,10 +29,10 @@
     .group{
       padding: 40px 0px 20px 0px;
       color: white;
-      .groupname{
+      .group__name{
         font-size: 15px;
       }
-      .lastmessage{
+      .group__message{
         font-size: 11px;
       }
     }
