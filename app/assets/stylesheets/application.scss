@@ -16,7 +16,12 @@
       font-size: 16px;
       float:left;
     }
-    .list{
+    .haguruma{
+      float: right;
+      color:white;
+      float:right;
+    }
+    .enpitu{
       float: right;
       color:white;
       float:right;
@@ -29,10 +34,10 @@
     .group{
       padding: 40px 0px 20px 0px;
       color: white;
-      .group__name{
+      .groupname{
         font-size: 15px;
       }
-      .group__message{
+      .lastmessage{
         font-size: 11px;
       }
     }
@@ -115,15 +120,15 @@
       width: calc(100% - 150px);
       float:left;
     }
-    .sendbottan {
-      background-color: #38AEF0;
-      border: none;
-      color: #fff;
-      float: right;
-      font-size: 16px;
-      height: 50px;
-      margin-left: 15px;
-      padding: 0 30px;
-    }
+  .sendbottan {
+    background-color: #38AEF0;
+    border: none;
+    color: #fff;
+    float: right;
+    font-size: 16px;
+    height: 50px;
+    margin-left: 15px;
+    padding: 0 30px;
   }
+}
 }
