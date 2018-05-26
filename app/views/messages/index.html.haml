@@ -4,30 +4,30 @@
       .username
         teradakenya
       %ul{:class => "header__lists"}
-        %li{:class => "haguruma"}
+        %li{:class => "list"}
           %i.fa.fa-cog
-        %li{:class => "enpitu"}<
+        %li{:class => "list"}<
           %i.fa.fa-pencil
     .groups
       .group
-        .groupname
+        %a{href: 'https://qiita.com/hyungg/items/20229fbd39efcb81236c',:class => "groupname" }
           グループ名
-        .lastmessage
+        .groupmessage
           おはよう
   .chat
     .chatheader
-      .chatgrouptitle
-        .chatnametitle
+      .left-header
+        .chattitle
           グループ名
-        .chatmembertitle
+        .chatmember
           member:terada
       .right-header
         %a{href: 'https://qiita.com/hyungg/items/20229fbd39efcb81236c',:class => "right-header__button" }
           Edit
     .chatgroups
       .chatgroup
-        %ul{:class => "chatinfo"}
-          %li{:class => "chatname"}
+        %ul{:class => "chat__lists"}
+          %li{:class => "chatuser"}
             teradakenya
           %li{:class => "chattime"}<
             2018/05/22 03:55
@@ -37,4 +37,5 @@
       %form{:action => ""}
         %input{:name => "newmessageform", :type => "text", :class => "messageform"}/
         %input{:type => "submit", :value => "Send", :class => "sendbottan"}/
+
 
