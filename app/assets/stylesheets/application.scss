@@ -3,6 +3,13 @@
 
 
 
+a{
+  text-decoration : underline;
+  color : #ffffff;
+}
+
+
+
 .side-bar {
   width: 300px;
   float:left;
@@ -20,13 +27,13 @@
     .list{
       float: right;
       color:white;
-      float:right;
     }
   }
   .groups {
     height:calc(100vh - 100px);
     background-color: #2f3e51;
     padding:0px 20px 0px 20px;
+
     .group{
       padding: 40px 0px 20px 0px;
       color: white;
@@ -84,6 +91,7 @@
   }
 
   .chatgroups{
+    border: solid 20px #008080;
     height: calc(100vh - 100px - 90px);
     background-color: #FAFAFA;
     padding:0px 40px;
@@ -115,10 +123,30 @@
     padding:20px 50px 20px 40px;
     background-color:#dddddd;
     .messageform{
+      border: none;
+      box-sizing: border-box;
+      float: left;
       height: 50px;
+      padding: 0 10px;
       width: calc(100% - 150px);
-      float:left;
     }
+//    .form__mask {
+//      background-color: #fff;
+//      float: left;
+//      height: 50px;
+//      padding-right: 10px;
+//    }
+    .form_mask{
+      background-color: #fff;
+      float: left;
+      height: 50px;
+      padding-right: 10px;
+      padding:40px 0 0 0 0;
+      .icon{
+        line-height:50px;
+      }
+    }
+
     .sendbottan {
       background-color: #38AEF0;
       border: none;

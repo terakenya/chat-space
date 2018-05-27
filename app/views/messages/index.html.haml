@@ -5,12 +5,14 @@
         teradakenya
       %ul{:class => "header__lists"}
         %li{:class => "list"}
-          %i.fa.fa-cog
-        %li{:class => "list"}<
-          %i.fa.fa-pencil
+          %a{href: 'https://qiita.com/hyungg/items/20229fbd39efcb81236c' }
+            %i.fa.fa-cog
+        %li{:class => "list"}
+          %a{href: 'https://qiita.com/hyungg/items/20229fbd39efcb81236c' }
+            %i.fa.fa-pencil
     .groups
       .group
-        %a{href: 'https://qiita.com/hyungg/items/20229fbd39efcb81236c',:class => "groupname" }
+        .groupname
           グループ名
         .groupmessage
           おはよう
@@ -36,6 +38,12 @@
     .form
       %form{:action => ""}
         %input{:name => "newmessageform", :type => "text", :class => "messageform"}/
+        .form_mask
+          %label{:for => "name1",:class => "icon"}
+            %i.fa.fa-picture-o.fa-lg
+          %input{:style => "display:none",:name => "example3",:type => "file",:class => "imageform",:id => "name1",:id => "name1",:size => "30"}/
         %input{:type => "submit", :value => "Send", :class => "sendbottan"}/
+
+
 
 
