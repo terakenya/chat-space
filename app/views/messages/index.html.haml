@@ -3,20 +3,20 @@
   .header
     .username
       teradakenya
-    %ul{:class => "header__lists"}
-      %li{:class => "list"}
-        %a{href: 'https://qiita.com/hyungg/items/20229fbd39efcb81236c' }
+    %ul{class: :header__lists}
+      %li{class: :list}
+        = link_to 'https://qiita.com/hyungg/items/20229fbd39efcb81236c' do
           %i.fa.fa-cog
-      %li{:class => "list"}
-        %a{href: 'https://qiita.com/hyungg/items/20229fbd39efcb81236c' }
+      %li{class: :list}
+        = link_to 'https://qiita.com/hyungg/items/20229fbd39efcb81236c' do
           %i.fa.fa-pencil
   .groups
     .group
-      %a{href: 'https://qiita.com/hyungg/items/20229fbd39efcb81236c' }
-        .groupname
-          グループ名
-        .groupmessage
-          おはよう
+      .groupname
+        = link_to 'グループ名', 'http://google.co.jp'
+      .groupmessage
+        = link_to 'おはよう', 'http://google.co.jp'
+
 .chat
   .chatheader
     .left-header
@@ -25,26 +25,21 @@
       .chatmember
         member:terada
     .right-header
-      %a{href: 'https://qiita.com/hyungg/items/20229fbd39efcb81236c',:class => "right-header__button" }
-        Edit
+      = link_to 'Edit', 'http://google.co.jp', class: :"right-header__button"
   .chatgroups
     .chatgroup
-      %ul{:class => "chat__lists"}
-        %li{:class => "chatuser"}
+      %ul{class: :chat__lists}
+        %li{class: :chatuser}
           teradakenya
-        %li{:class => "chattime"}<
+        %li{class: :chattime}<
           2018/05/22 03:55
       .chatmessage
         hellochatspace
   .form
-    %form{:action => ""}
-      %input{:name => "newmessageform", :type => "text", :class => "messageform", :placeholder => "type a message"}/
+    %form{action: :""}
+      %input{name: :newmessageform, type: :text, class: :messageform, placeholder: :"type a message"}
       .form_mask
-        %label{:for => "name1",:class => "icon"}
+        %label{for: :name1,class: :icon}
           %i.fa.fa-picture-o.fa-lg
-        %input{:style => "display:none",:type => "file",:class => "imageform",:id => "name1",:id => "name1"}/
-      %input{:type => "submit", :value => "Send", :class => "sendbottan"}/
-
-
-
-
+        %input{style: :"display:none", type: :file, class: :imageform, id: :name1}
+      %input{type: :submit, value: :Send, class: :sendbuttan}
