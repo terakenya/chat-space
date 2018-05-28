@@ -3,7 +3,7 @@
   .header
     .username
       teradakenya
-    %ul{class: :header__lists}
+    %ul
       %li{class: :list}
         = link_to 'https://qiita.com/hyungg/items/20229fbd39efcb81236c' do
           %i.fa.fa-cog
@@ -42,4 +42,4 @@
         %label{for: :name1,class: :icon}
           %i.fa.fa-picture-o.fa-lg
         %input{style: :"display:none", type: :file, class: :imageform, id: :name1}
-      %input{type: :submit, value: :Send, class: :sendbuttan}
+      %input{type: :submit, value: :Send, class: :sendbutton}
