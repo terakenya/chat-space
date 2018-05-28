@@ -4,10 +4,10 @@
     .username
       teradakenya
     %ul
-      %li{class: :list}
+      %li{class: "list"}
         = link_to 'https://qiita.com/hyungg/items/20229fbd39efcb81236c' do
           %i.fa.fa-cog
-      %li{class: :list}
+      %li{class: "list"}
         = link_to 'https://qiita.com/hyungg/items/20229fbd39efcb81236c' do
           %i.fa.fa-pencil
   .groups
@@ -25,21 +25,21 @@
       .chatmember
         member:terada
     .right-header
-      = link_to 'Edit', 'http://google.co.jp', class: :"right-header__button"
+      = link_to 'Edit', 'http://google.co.jp', class: "right-header__button"
   .chatgroups
     .chatgroup
-      %ul{class: :chat__lists}
-        %li{class: :chatuser}
+      %ul{class: "chat__lists"}
+        %li{class: "chatuser"}
           teradakenya
-        %li{class: :chattime}<
+        %li{class: "chattime"}<
           2018/05/22 03:55
       .chatmessage
         hellochatspace
   .form
-    %form{action: :""}
-      %input{name: :newmessageform, type: :text, class: :messageform, placeholder: :"type a message"}
+    %form{action: ""}
+      %input{type: "text", class: "messageform", placeholder: "type a message"}
       .form_mask
-        %label{for: :name1,class: :icon}
+        %label{for: "name1",class: "icon"}
           %i.fa.fa-picture-o.fa-lg
-        %input{style: :"display:none", type: :file, class: :imageform, id: :name1}
-      %input{type: :submit, value: :Send, class: :sendbutton}
+        %input{style: "display:none", type: "file", class: "imageform", id: "name1"}
+      %input{type: "submit", value: "Send", class: "sendbutton"}
