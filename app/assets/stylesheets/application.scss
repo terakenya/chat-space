@@ -1,68 +1,34 @@
 @import "./reset";
 @import "font-awesome";
+@import "./variable";
+//TODOサイドバーの読み込み
+@import "./sidebar";
 
-
-.side-bar {
-  width: 300px;
-  float:left;
-  background-color:yellow;
-  .header {
-    height:100px;
-    background-color: #253141;
-    padding:0px 20px;
-    line-height: 100px;
-    .username{
-      color:white;
-      font-size: 16px;
-      float:left;
-    }
-    .haguruma{
-      float: right;
-      color:white;
-      float:right;
-    }
-    .enpitu{
-      float: right;
-      color:white;
-      float:right;
-    }
-  }
-  .groups {
-    height:calc(100vh - 100px);
-    background-color: #2f3e51;
-    padding:0px 20px 0px 20px;
-    .group{
-      padding: 40px 0px 20px 0px;
-      color: white;
-      .groupname{
-        font-size: 15px;
-      }
-      .lastmessage{
-        font-size: 11px;
-      }
-    }
-  }
+a{
+  text-decoration : none;
+  color : white;
 }
 
-
+.wrapper{
+  height: 20px;
+  background-color: $Lightblue;
+}
 .chat {
   width:calc(100vw - 300px);
   background-color:red;
   float:right;
-
   .chatheader{
     height: 100px;
     padding:0px 40px;
     background-color: white;
-    .chatgrouptitle{
+    .left-header{
       float:left;
-      .chatnametitle{
+      .chattitle{
         padding:35px 0px 0px 0px;
         font-size: 20px;
         color:#333333;
-        font-weight: bold;
       }
-      .chatmembertitle{
+      .chatmember{
         padding:15px 0px 0px 0px;
         font-size: 12px;
         color:#999999
@@ -83,15 +49,14 @@
       }
     }
   }
-
   .chatgroups{
     height: calc(100vh - 100px - 90px);
     background-color: #FAFAFA;
     padding:0px 40px;
     overflow: scroll;
     .chatgroup{
-      .chatinfo{
-        .chatname{
+      .chat__lists{
+        .chatuser{
           padding:46px 0 0 0;
           font-size: 16px;
           color:#434A54;
@@ -116,19 +81,32 @@
     padding:20px 50px 20px 40px;
     background-color:#dddddd;
     .messageform{
+      border: none;
+      box-sizing: border-box;
+      float: left;
       height: 50px;
+      padding: 0 10px;
       width: calc(100% - 150px);
-      float:left;
     }
-  .sendbottan {
-    background-color: #38AEF0;
-    border: none;
-    color: #fff;
-    float: right;
-    font-size: 16px;
-    height: 50px;
-    margin-left: 15px;
-    padding: 0 30px;
+    .form_mask{
+      background-color: #fff;
+      float: left;
+      height: 50px;
+      padding-right: 10px;
+      padding:40px 0 0 0 0;
+      .icon{
+        line-height:50px;
+      }
+    }
+    .sendbutton {
+      background-color: $Lightblue;
+      border: none;
+      color: #fff;
+      float: right;
+      font-size: 16px;
+      height: 50px;
+      margin-left: 15px;
+      padding: 0 30px;
+    }
   }
-}
 }
