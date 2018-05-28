@@ -1,0 +1,39 @@
+.side-bar {
+  width: 300px;
+  float:left;
+  .header {
+    height:100px;
+    background-color: $deepblue;
+    padding:0px 20px;
+    line-height: 100px;
+    .username{
+      color:white;
+      font-size: 16px;
+      float:left;
+      font-weight: bold;
+    }
+    .list{
+      float: right;
+      color:white;
+    }
+  }
+  .groups {
+    height:calc(100vh - 100px);
+    background-color: $Indigoblue;
+    padding:0px 20px 0px 20px;
+
+    .group{
+      padding: 40px 0px 20px 0px;
+      color: white;
+      .groupname{
+        text-decoration: none;
+        font-size: 15px;
+        color:white;
+
+      }
+      .groupmessage{
+        font-size: 11px;
+      }
+    }
+  }
+}

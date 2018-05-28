@@ -1,61 +1,22 @@
 @import "./reset";
 @import "font-awesome";
-
-
+@import "./variable";
+//TODOサイドバーの読み込み
+@import "./sidebar";
 
 a{
-  text-decoration : underline;
-  color : #ffffff;
+  text-decoration : none;
+  color : white;
 }
 
-
-
-.side-bar {
-  width: 300px;
-  float:left;
-  background-color:yellow;
-  .header {
-    height:100px;
-    background-color: #253141;
-    padding:0px 20px;
-    line-height: 100px;
-    .username{
-      color:white;
-      font-size: 16px;
-      float:left;
-    }
-    .list{
-      float: right;
-      color:white;
-    }
-  }
-  .groups {
-    height:calc(100vh - 100px);
-    background-color: #2f3e51;
-    padding:0px 20px 0px 20px;
-
-    .group{
-      padding: 40px 0px 20px 0px;
-      color: white;
-      .groupname{
-        text-decoration: none;
-        font-size: 15px;
-        color:white;
-
-      }
-      .groupmessage{
-        font-size: 11px;
-      }
-    }
-  }
+.wrapper{
+  height: 20px;
+  background-color: $Lightblue;
 }
-
-
 .chat {
   width:calc(100vw - 300px);
   background-color:red;
   float:right;
-
   .chatheader{
     height: 100px;
     padding:0px 40px;
@@ -66,7 +27,6 @@ a{
         padding:35px 0px 0px 0px;
         font-size: 20px;
         color:#333333;
-        font-weight: bold;
       }
       .chatmember{
         padding:15px 0px 0px 0px;
@@ -89,9 +49,7 @@ a{
       }
     }
   }
-
   .chatgroups{
-    border: solid 20px #008080;
     height: calc(100vh - 100px - 90px);
     background-color: #FAFAFA;
     padding:0px 40px;
@@ -130,12 +88,6 @@ a{
       padding: 0 10px;
       width: calc(100% - 150px);
     }
-//    .form__mask {
-//      background-color: #fff;
-//      float: left;
-//      height: 50px;
-//      padding-right: 10px;
-//    }
     .form_mask{
       background-color: #fff;
       float: left;
@@ -146,9 +98,8 @@ a{
         line-height:50px;
       }
     }
-
     .sendbottan {
-      background-color: #38AEF0;
+      background-color: $Lightblue;
       border: none;
       color: #fff;
       float: right;
