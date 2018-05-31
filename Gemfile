@@ -57,3 +57,5 @@ gem 'erb2haml'
 gem "font-awesome-rails"
 #hamlを導入
 gem 'haml-rails'
+#deviseの導入
+gem 'devise'

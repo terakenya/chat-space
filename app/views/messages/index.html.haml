@@ -1,11 +1,11 @@
-.wrapper
+
 .side-bar
   .header
     .username
-      teradakenya
+      = current_user.name
     %ul
       %li{class: "list"}
-        = link_to 'https://qiita.com/hyungg/items/20229fbd39efcb81236c' do
+        = link_to edit_user_path(current_user) do
           %i.fa.fa-cog
       %li{class: "list"}
         = link_to 'https://qiita.com/hyungg/items/20229fbd39efcb81236c' do
@@ -43,3 +43,4 @@
           %i.fa.fa-picture-o.fa-lg
         %input{style: "display:none", type: "file", class: "imageform", id: "name1"}
       %input{type: "submit", value: "Send", class: "sendbutton"}
+

@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  resources :products
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  devise_for :installs
   root 'messages#index'
+
+  devise_for :users
+  resources :products
+  resources :groups, only: [:new, :create, :edit, :update] do
+    resources :messages, only: [:index, :create]
+  end
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :users, only: [:edit, :update]
 end
