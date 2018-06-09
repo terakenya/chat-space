@@ -1,0 +1,20 @@
+.side-bar
+  .header
+    .username
+      = current_user.name
+    %ul
+      %li{class: "list"}
+        = link_to edit_user_path(current_user) do
+          %i.fa.fa-cog
+      %li{class: "list"}
+        = link_to new_group_path(current_user) do
+          %i.fa.fa-pencil
+
+  .groups
+    .group
+      -current_user.groups.each do |group|
+        =link_to group_messages_path(group) do
+          .groupname
+            = group.name
+          .groupmessage
+            = group.show_last_message

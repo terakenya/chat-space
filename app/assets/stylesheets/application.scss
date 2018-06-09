@@ -1,18 +1,19 @@
 @import "./reset";
-@import "font-awesome";
+@import "./font-awesome";
 @import "./variable";
 //TODOサイドバーの読み込み
 @import "./sidebar";
+@import "./user";
+// colors.scssとflash.scssをインポート
+@import "./flash";
+@import "./group";
 
 a{
   text-decoration : none;
   color : white;
 }
 
-.wrapper{
-  height: 20px;
-  background-color: $Lightblue;
-}
+
 .chat {
   width:calc(100vw - 300px);
   background-color:red;

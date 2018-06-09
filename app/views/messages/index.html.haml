@@ -1,45 +1,33 @@
-.wrapper
-.side-bar
-  .header
-    .username
-      teradakenya
-    %ul
-      %li{class: "list"}
-        = link_to 'https://qiita.com/hyungg/items/20229fbd39efcb81236c' do
-          %i.fa.fa-cog
-      %li{class: "list"}
-        = link_to 'https://qiita.com/hyungg/items/20229fbd39efcb81236c' do
-          %i.fa.fa-pencil
-  .groups
-    .group
-      .groupname
-        = link_to 'グループ名', 'http://google.co.jp'
-      .groupmessage
-        = link_to 'おはよう', 'http://google.co.jp'
+//sidebarの読み込み
+= render "sidebar"
 
 .chat
   .chatheader
     .left-header
       .chattitle
-        グループ名
+        = @group.name
       .chatmember
         member:terada
     .right-header
-      = link_to 'Edit', 'http://google.co.jp', class: "right-header__button"
+      = link_to 'Edit', edit_group_path(current_user), class: "right-header__button"
+
   .chatgroups
-    .chatgroup
-      %ul{class: "chat__lists"}
-        %li{class: "chatuser"}
-          teradakenya
-        %li{class: "chattime"}<
-          2018/05/22 03:55
-      .chatmessage
-        hellochatspace
+    = render partial: 'message', collection: @messages
+
+  / .form
+  /   %form{action: ""}
+  /     %input{type: "text", class: "messageform", placeholder: "type a message"}
+  /     .form_mask
+  /       %label{for: "name1",class: "icon"}
+  /         %i.fa.fa-picture-o.fa-lg
+  /       %input{style: "display:none", type: "file", class: "imageform", id: "name1"}
+  /     %input{type: "submit", value: "Send", class: "sendbutton"}
   .form
-    %form{action: ""}
-      %input{type: "text", class: "messageform", placeholder: "type a message"}
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: "messageform", placeholder: 'type a message'
       .form_mask
-        %label{for: "name1",class: "icon"}
-          %i.fa.fa-picture-o.fa-lg
-        %input{style: "display:none", type: "file", class: "imageform", id: "name1"}
-      %input{type: "submit", value: "Send", class: "sendbutton"}
+        =f.label :image, class: "icon" do
+          = fa_icon 'picture-o', class: 'icon'
+          = f.file_field :image, class: 'imageform', style: 'display:none'
+      = f.submit 'Send', class: 'sendbutton'
+
