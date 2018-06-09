@@ -59,3 +59,17 @@ gem "font-awesome-rails"
 gem 'haml-rails'
 #deviseの導入
 gem 'devise'
+#画像の送信
+gem 'carrierwave'
+gem 'mini_magick'
+
+group :development, :test do
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'pry-doc'
+  gem 'rspec-rails', '~> 3.5'
+  gem 'rails-controller-testing'
+  gem 'factory_bot_rails'
+  gem 'faker'
+end
+
