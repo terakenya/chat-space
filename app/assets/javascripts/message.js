@@ -3,7 +3,7 @@ $(function(){
     if (message.image.url){
       var image = `<img src="${message.image.url}" class="lower-message__image">`;
     }else{
-      var image =``;
+      var image ='';
     }
     if( message.content || message.image){
       var html = `<div class="chatgroup">
@@ -43,7 +43,6 @@ $(function(){
       var html = buildHTML(data);
       $('.chatgroups').append(html);
       $('#new_message')[0].reset();
-      $('.chat_groups').animate({scrollTop: 300});
       $('.chatgroups').animate({scrollTop:$('.chatgroups')[0].scrollHeight});
       $('.sendbutton').removeAttr("disabled");
     })
