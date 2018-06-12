@@ -1,7 +1,7 @@
 $(function(){
   function buildHTML(message){
-    if (message.image.url){
-      var image = `<img src="${message.image.url}" class="lower-message__image">`;
+    if (message.image){
+      var image = `<img src="${message.image}" class="lower-message__image">`;
     }else{
       var image ='';
     }
@@ -25,7 +25,11 @@ $(function(){
       return html;
     }
   }
-  //メッセージのスクロール
+  //スクロール機能
+  function scroll(){
+    $('.chatgroups').animate({scrollTop:$('.chatgroups')[0].scrollHeight});
+  }
+
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -39,16 +43,16 @@ $(function(){
       contentType: false
     })
     .done(function(data){
-
       var html = buildHTML(data);
       $('.chatgroups').append(html);
       $('#new_message')[0].reset();
-      $('.chatgroups').animate({scrollTop:$('.chatgroups')[0].scrollHeight});
+      scroll();
       $('.sendbutton').removeAttr("disabled");
     })
     .fail(function(){
       $('#new_message')[0].reset();
       alert('error');
+      $('.sendbutton').removeAttr("disabled");
     })
   })
 });
