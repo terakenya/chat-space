@@ -1,8 +1,8 @@
-.chatgroup
+.chatgroup{ 'data-message-id': message.id }
   %ul{class: "chat__lists"}
     %li{class: "chatuser"}
       = message.user.name
-    %li{class: "chattime"}<
+    %li{class: "chattime"}
       = message.created_at
   .chatmessage
     - if message.content.present?
