@@ -55,6 +55,7 @@ $(function(){
       $('.sendbutton').removeAttr("disabled");
     })
   })
+
   var interval = setInterval(function() {
     var message_id = $('.chatgroup').last().data('message-id');
     var url = location.pathname.match(/\/groups\/\d+\/messages/);
