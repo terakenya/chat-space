@@ -6,7 +6,7 @@ $(function(){
       var image ='';
     }
     if( message.content || message.image){
-      var html = `<div class="chatgroup">
+      var html = `<div class="chatgroup" data-message-id="${message.id}">
                     <ul class="chat__lists">
                       <li class="chatuser">
                         ${message.user_name}
@@ -55,4 +55,30 @@ $(function(){
       $('.sendbutton').removeAttr("disabled");
     })
   })
+  var interval = setInterval(function() {
+    var message_id = $('.chatgroup').last().data('message-id');
+    var url = location.pathname.match(/\/groups\/\d+\/messages/);
+    if (url) {
+      $.ajax({
+        url: url,
+        type: "GET",
+        data:  {id: message_id},
+        dataType: 'json'
+      })
+      .done(function(datas) {
+        if (datas.length !== 0) {
+          datas.forEach(function(data){
+            var html = buildHTML(data);
+            $('.chatgroups').append(html);
+            scroll();
+          })
+        }
+      })
+      .fail(function() {
+        alert('自動更新に失敗しました')
+      })
+    } else {
+      clearInterval(interval)
+    }
+  }, 5000);
 });
