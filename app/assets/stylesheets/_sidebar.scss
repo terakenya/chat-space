@@ -21,7 +21,7 @@
     height:calc(100vh - 100px);
     background-color: $Indigoblue;
     padding:0px 20px 0px 20px;
-
+    overflow: scroll;
     .group{
       padding: 40px 0px 20px 0px;
       color: white;
