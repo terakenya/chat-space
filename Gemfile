@@ -73,3 +73,6 @@ group :development, :test do
   gem 'faker'
 end
 
+group :production do
+  gem 'unicorn'
+end
