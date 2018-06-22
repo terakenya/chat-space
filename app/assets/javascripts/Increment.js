@@ -50,7 +50,8 @@ $(function() {
   $("#user-search-result").on('click', '.user-search-add', function() {
     $("#user-search-field").val('')
     var user_name = $(this).data('user-name')
-    var user_id = $(this).data('data-user-id');
+    var user_id = $(this).data('user-id');
+
     appendGroupUser(user_id, user_name);
     $(this).parent().remove();
   });
