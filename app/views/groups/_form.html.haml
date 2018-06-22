@@ -1,9 +1,9 @@
-= form_for @group do |f|
-  - if @group.errors.any?
+= form_for group do |f|
+  - if group.errors.any?
     .chat-group-form__errors
     %h2= "#{group.errors.full_messages.count}件のエラーが発生しました。"
     %ul
-      - @group.errors.full_messages.each do |message|
+      - group.errors.full_messages.each do |message|
         %li= message
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
@@ -23,7 +23,7 @@
     .chat-group-form__field--right
       #chat-group-users
         .chat-group-user.clearfix
-          %input{name: "chat_group[user_ids][]", type: "hidden", value: current_user.id}
+          = f.hidden_field :user_ids, value: current_user.id, multiple: true
           %p.chat-group-user__name
             = current_user.name
   .chat-group-form__field
